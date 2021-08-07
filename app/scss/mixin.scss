@@ -1,0 +1,48 @@
+$white: #fff;
+$black: #000;
+$red: #ED093E;
+$dark-pink: #EE2655;
+$grey: #727272;
+
+$ngwhite : #f5f5f5;
+$ngred : #ff4338;
+$ngblue : #00b3e3;
+$nggreen : #3cd52e;
+$ngblack : #111820;
+$nggrey: #a5a5a5;
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+$z-indexes: (
+        "model-menu",
+        "hamburger-open",
+);
+
+@function z($name) {
+  @if index($z-indexes,
+          $name) {
+    @return (length($z-indexes) - index($z-indexes, $name))+1;
+  }
+  @else {
+    @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+    @return null;
+  }
+}
+
+@mixin transition($element: all, $time: .2s, $function: linear) {
+  transition: $element $time $function;
+}
+
+@mixin pos-center {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}

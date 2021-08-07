@@ -1,0 +1,150 @@
+@import 'mixin';
+
+html{
+  height: 100%;
+}
+html, body{
+  margin: 0;
+}
+body{
+  position: relative;
+  font-size: 14px;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+*{
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  padding: 0;
+  margin: 0;
+
+  &::selection {
+    background: #e8334d;
+    color: #fff;
+  }
+}
+img{
+  max-width: 100%;
+  display: inline-block;
+}
+a{
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  @include transition;
+
+  &:hover{
+    color: $red;
+  }
+}
+h1, h2, h3, h4, h5, h6{
+  margin-top: 0;
+  font-weight: normal;
+}
+h1{
+  font-size: 100px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 100;
+  line-height: 147px;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+}
+h2{
+  font-size: 69px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 100;
+  line-height: 75px;
+  padding: 30px 0 15px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    background: #EF2756;
+    top: 0;
+    left: 50%;
+  }
+}
+h3{
+  font-size: 24px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
+  line-height: 35px;
+}
+h4{
+  font-size: 32px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
+  line-height: 76px;
+}
+h5{
+  font-size: 22px;
+  font-family: 'PT Serif', serif;
+  font-style: italic;
+  line-height: 24px;
+  color: $grey;
+}
+h6{
+  font-size: 24px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 300;
+  line-height: 35px;
+}
+p{
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+ul{
+  list-style: none;
+}
+button{
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
+  appearance: none;
+}
+input{
+  appearance: none;
+}
+input:not([type="submit"]){
+  width: 100%;
+  border: none;
+  border-radius: 2px;
+  height: 60px;
+  padding: 0 15px;
+  font-size: 16px;
+  font-family: 'Heebo', sans-serif;
+  font-weight: 400;
+  color: $white;
+}
+textarea{
+  max-width: 100%;
+  outline: none;
+  border: none;
+  display: block;
+  padding: 15px 0;
+  min-height: 178px;
+  font-size: 16px;
+  width: 100%;
+  resize: none;
+}
+address{
+  font-style: normal;
+}
+strong{
+  font-weight: 700;
+}
+::-webkit-input-placeholder {color:#fff;}
+::-moz-placeholder          {color:#fff;}
+:-moz-placeholder           {color:#fff;}
+:-ms-input-placeholder      {color:#fff;}
