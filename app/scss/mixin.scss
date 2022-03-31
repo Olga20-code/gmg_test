@@ -1,8 +1,10 @@
 $white: #fff;
 $black: #000;
 $red: #ED093E;
-$dark-pink: #EE2655;
-$grey: #727272;
+$grey: #424242;
+$yellow: #d1b544;
+$dark-yellow: #f3d250;
+$blue: #90ccf4;
 
 $ngwhite : #f5f5f5;
 $ngred : #ff4338;
@@ -45,4 +47,8 @@ $z-indexes: (
   left: 0;
   bottom: 0;
   margin: auto;
+}
+
+@mixin text-center {
+  text-align: center;
 }

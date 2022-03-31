@@ -1,0 +1,95 @@
+@import 'app/scss/default';
+@import 'app/scss/mixin';
+@import "../../libs/slick/slick";
+
+.about-page {
+  header {
+    background-image: url(../../img/pages/main.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-height: 550px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgb(16,15,31);
+      background: linear-gradient(180deg, rgba(16,15,31,1) 71%, rgba(61,61,61,1) 90%, rgba(212,212,212,1) 100%);
+      opacity: .6;
+    }
+  }
+
+  .service {
+    .grid {
+      align-items: center;
+    }
+
+    h3 {
+      font-size: 40px;
+      color: $dark-yellow;
+      font-family: 'Roboto', sans-serif;
+      line-height: 50px;
+    }
+
+    h2 {
+      font-size: 53px;
+      color: $black;
+      font-family: 'Roboto', sans-serif;
+      line-height: 60px;
+      font-weight: 600;
+    }
+
+    li {
+      font-family: 'Roboto', sans-serif;
+      font-size: 17px;
+      color: $grey;
+      line-height: 35px;
+    }
+
+    .lang {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+
+      h2 {
+        color: $yellow;
+      }
+    }
+
+    .flag {
+      width: 38px;
+      height: 38px;
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100px;
+        border-radius: 25%;
+        background: $grey;
+        top: 20px;
+        right: 60px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100px;
+        border-radius: 25%;
+        background: $grey;
+        top: 20px;
+        left: 60px;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
